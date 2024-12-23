@@ -1,5 +1,7 @@
 //src\components\layout\CourseListStudent.tsx
 
+"use client";
+
 import { ArrowRightIcon, StarIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,11 +15,24 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import { type CourseListStudentProps } from "~/types";
+
+interface Course {
+  id: string;
+  coverImageKey: string;
+  title: string;
+  category: string;
+  description: string;
+  instructor: string;
+  rating?: number;
+}
+
+interface CourseListStudentProps {
+  courses: Course[];
+}
 
 export default function CourseListStudent({ courses }: CourseListStudentProps) {
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {courses.map((course) => (
         <Card key={course.id} className="overflow-hidden">
           <CardHeader className="p-0">
@@ -32,8 +47,8 @@ export default function CourseListStudent({ courses }: CourseListStudentProps) {
               />
             </AspectRatio>
           </CardHeader>
-          <CardContent className="p-4">
-            <CardTitle className="mb-2 rounded-lg bg-primary bg-opacity-50 text-xl text-background">
+          <CardContent className="p-3">
+            <CardTitle className="mb-2 rounded-lg bg-primary bg-opacity-50 text-lg text-background">
               <span className="ml-2 font-bold">{course.title}</span>{" "}
             </CardTitle>
             <div className="mb-2 flex items-center">
@@ -57,7 +72,7 @@ export default function CourseListStudent({ courses }: CourseListStudentProps) {
               </span>
             </p>
           </CardContent>
-          <CardFooter className="flex items-center justify-between px-4">
+          <CardFooter className="flex items-center justify-between px-3">
             <Link
               href={`/dashboard/estudiantes/cursos/${course.id}`}
               legacyBehavior

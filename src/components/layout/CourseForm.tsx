@@ -3,7 +3,7 @@
 import { useState, type ChangeEvent, useEffect } from "react";
 import { Progress } from "~/components/ui/progress";
 
-type CourseFormProps = {
+interface CourseFormProps {
   onSubmitAction: (
     title: string,
     description: string,
@@ -11,10 +11,22 @@ type CourseFormProps = {
     category: string,
     instructor: string,
     rating: number
-  ) => void;
+  ) => Promise<void>;
   uploading: boolean;
-  editingCourseId: number | null;
-};
+  editingCourseId: string | null;
+  title: string;
+  setTitle: (title: string) => void;
+  setDescription: (description: string) => void;
+  category: string;
+  setCategory: (category: string) => void;
+  instructor: string;
+  setInstructor: (instructor: string) => void;
+  rating: number;
+  setRating: (rating: number) => void;
+  coverImageKey: string;
+  setCoverImageKey: (coverImageKey: string) => void;
+}
+
 
 export default function CourseForm({ onSubmitAction, uploading, editingCourseId }: CourseFormProps) {
   const [title, setTitle] = useState("");
@@ -38,9 +50,9 @@ export default function CourseForm({ onSubmitAction, uploading, editingCourseId 
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setIsEditing(true);
-    onSubmitAction(title, description, file, category, instructor, rating);
+    await onSubmitAction(title, description, file, category, instructor, rating);
   };
 
   useEffect(() => {
@@ -118,7 +130,7 @@ export default function CourseForm({ onSubmitAction, uploading, editingCourseId 
           input[type="file"]::file-selector-button {
             background-color: #007bff;
             color: white;
-            border: none;
+            border: 2px;
             padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
@@ -132,7 +144,7 @@ export default function CourseForm({ onSubmitAction, uploading, editingCourseId 
           input[type="file"] {
             font-size: 14px; /* Cambia el estilo del texto al lado del botón */
             color: hsl(var(--primary));
-            font-family: Arial, sans-serif;
+            font-family: montserrat;
           }
         `}</style>
         <input
@@ -143,7 +155,7 @@ export default function CourseForm({ onSubmitAction, uploading, editingCourseId 
           className="w-full rounded border border-primary p-2"
         />
         {fileName && (
-          <p className="mt-2 text-sm text-primary">
+          <p className="mt-3 text-sm text-primary">
             Archivo seleccionado: {fileName}
           </p>
         )}
