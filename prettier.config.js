@@ -3,8 +3,4 @@ const config = {
   plugins: ["prettier-plugin-tailwindcss"],
 };
 
-<<<<<<< HEAD
 export default config;
-=======
-export default config;
->>>>>>> origin/main

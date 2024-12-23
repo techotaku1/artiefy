@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
+HEAD
 html {
   @apply bg-black;
 }
@@ -120,7 +120,6 @@ html {
     @apply bg-background text-foreground;
   }
 }
-=======
 @layer base {
   :root {
     --background: 212.9, 95.5%, 8.6%;  /* {#01142B} */
@@ -215,8 +214,3 @@ html {
 .cl-userButtonOuterIdentifier {
   color: #ff6347; /* Cambia este color al que prefieras */
 }
-
-
-
-
->>>>>>> origin/main
