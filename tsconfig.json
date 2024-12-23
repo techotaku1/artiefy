@@ -24,7 +24,11 @@
     "incremental": true,
 
     /* Path Aliases */
+<<<<<<< HEAD
     "baseUrl": "./",
+=======
+    "baseUrl": ".",
+>>>>>>> origin/main
     "paths": {
       "~/*": ["./src/*"]
     }
@@ -36,7 +40,12 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.js",
+<<<<<<< HEAD
     ".next/types/**/*.ts"
+=======
+    ".next/types/**/*.ts",
+    "**/*.jsx"
+>>>>>>> origin/main
   ],
   "exclude": ["node_modules"]
 }

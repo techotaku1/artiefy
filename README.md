@@ -27,6 +27,7 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+<<<<<<< HEAD
 
 # t3-app-next
 
@@ -46,3 +47,5 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [x]: Añadir las variables de entorno a tu proyecto de (vercel)
 - [x]: Configurar drizzle y conectar tu base de datos
 - [x]: Probar que funcione tu base de datos usando npm run db:push y npm run db:studio
+=======
+>>>>>>> origin/main

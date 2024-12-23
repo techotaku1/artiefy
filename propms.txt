@@ -1,0 +1,78 @@
+esta es mi proyecto app web educatica con 3 tipos de usuarios profesores estudiantes 
+y admins pero empezar a hacer el crud en el page.tsx de profofesores 
+con el sistema de subida de archvos para las imagenes 
+de portadas de los cursos y los videos de las clases de 
+los cursos y en el page.tsx de estudiantes la pagina principal de los cursos
+disponibles con rutas dinamicas de los id de cursos en el boton ver mas
+
+~ Next.js 15, Clerk, Tailwind CSS, shadcn/ui, Drizzle ORM, PostgreSQL, Neon, Vercel y TypeScript. 
+aws s3 para almacenamiento de archivos
+
+📦src
+ ┣ 📂app
+ ┃ ┣ 📂api
+ ┃ ┃ ┗ 📂upload
+ ┃ ┃ ┃ ┗ 📜route.ts
+ ┃ ┣ 📂dashboard
+ ┃ ┃ ┣ 📂admin
+ ┃ ┃ ┃ ┣ 📜ChangeRole.tsx
+ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┗ 📜SearchUsers.tsx
+ ┃ ┃ ┣ 📂estudiantes
+ ┃ ┃ ┃ ┣ 📂cursos
+ ┃ ┃ ┃ ┃ ┗ 📂[id]
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┗ 📂profesores
+ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┣ 📂sign-in
+ ┃ ┃ ┗ 📂[[...sign-in]]
+ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┣ 📂sign-up
+ ┃ ┃ ┗ 📂[[...sign-up]]
+ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┣ 📂unauthorized
+ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┣ 📂user-profile
+ ┃ ┃ ┗ 📂[[...user-profile]]
+ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┣ 📜layout.tsx
+ ┃ ┣ 📜loading.tsx
+ ┃ ┣ 📜not-found.tsx
+ ┃ ┗ 📜page.tsx
+ ┣ 📂components
+ ┃ ┣ 📂layout
+ ┃ ┃ ┗ 📜Header.tsx
+ ┃ ┗ 📂ui
+ ┃ ┃ ┣ 📜alert.tsx
+ ┃ ┃ ┣ 📜aspect-ratio.tsx
+ ┃ ┃ ┣ 📜button.tsx
+ ┃ ┃ ┣ 📜card.tsx
+ ┃ ┃ ┣ 📜input.tsx
+ ┃ ┃ ┣ 📜label.tsx
+ ┃ ┃ ┗ 📜progress.tsx
+ ┣ 📂hooks
+ ┃ ┗ 📜use-mobile.tsx
+ ┣ 📂lib
+ ┃ ┗ 📜utils.ts
+ ┣ 📂models
+ ┃ ┗ 📜courseModels.ts
+ ┣ 📂server
+ ┃ ┣ 📂actions
+ ┃ ┃ ┗ 📜_actions.ts
+ ┃ ┣ 📂db
+ ┃ ┃ ┣ 📜index.ts
+ ┃ ┃ ┗ 📜schema.ts
+ ┃ ┣ 📂queries
+ ┃ ┃ ┗ 📜queries.ts
+ ┃ ┗ 📂wrappers
+ ┃ ┃ ┗ 📜serverWrappers.ts
+ ┣ 📂styles
+ ┃ ┗ 📜globals.css
+ ┣ 📂types
+ ┃ ┗ 📜globals.d.ts
+ ┣ 📂utils
+ ┃ ┗ 📜roles.ts
+ ┣ 📜env.js
+ ┗ 📜middleware.ts
+#01142B #3AF4EF #00BDD8

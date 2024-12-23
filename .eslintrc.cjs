@@ -56,7 +56,13 @@ const config = {
         ]
       }
     ]
+<<<<<<< HEAD
   },
 };
 
 module.exports = config;
+=======
+  }
+}
+module.exports = config;
+>>>>>>> origin/main
